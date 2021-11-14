@@ -14,7 +14,21 @@ This project requires PHP 7.4 or higher.
 
 ## Installation
 
-There are two ways to download and use this utility:
+There are three ways to download and use this utility:
+
+### Composer Dependency
+
+Using PHP for your AoC puzzles? You can include this as a dev dependency in your repository:
+
+```bash
+composer require --dev colinodell/aoc-downloader
+```
+
+### Standalone PHAR
+
+Don't want to mix dependencies or prefer a single executable file?
+A pre-compiled PHAR is also available via the [Releases tab](https://github.com/colinodell/aoc-downloader/releases).
+Simply download the `.phar` file, make it executable, and run it.
 
 ### From Source
 
@@ -23,10 +37,6 @@ git clone https://github.com/colinodell/aoc-downloader.git
 cd aoc-downloader
 composer update -o --no-dev
 ```
-
-### PHAR
-
-A pre-compiled PHAR is also available via the [Releases tab](https://github.com/colinodell/aoc-downloader/releases).  Download the `.phar` file, make it executable, and run it.
 
 ## Usage
 
