@@ -1,6 +1,6 @@
 .idea
 .phpcs-cache
 composer.lock
+puzzles
 vendor
-output
 *.phar

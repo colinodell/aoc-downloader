@@ -54,7 +54,7 @@ Arguments:
   session_id            Session ID (from the adventofcode.com `session` cookie
 
 Options:
-  -o, --output=OUTPUT   The directory to save the downloaded files [default: "./output"]
+  -o, --output=OUTPUT   The directory to save the downloaded files [default: "./puzzles"]
   -y, --year=YEAR       The year to download puzzles for (default is all years)
   -h, --help            Display help for the given command. When no command is given display help for the ./bin/download.php command
   -q, --quiet           Do not output any message
@@ -67,7 +67,7 @@ Options:
 It will save both the puzzle test and input data locally:
 
 ```
-output/2020
+puzzles/2020
 ├── day01
 │   ├── input.txt
 │   └── README.md

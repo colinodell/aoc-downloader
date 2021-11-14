@@ -26,7 +26,7 @@ foreach ($autoloadPaths as $path) {
 
 (new SingleCommandApplication())
     ->setName('AOC Downloader')
-    ->addOption('output', 'o', InputOption::VALUE_REQUIRED, 'The directory to save the downloaded files', './output')
+    ->addOption('output', 'o', InputOption::VALUE_REQUIRED, 'The directory to save the downloaded files', './puzzles')
     ->addOption('year', 'y', InputOption::VALUE_REQUIRED, 'The year to download puzzles for (default is all years)')
     ->addArgument('session_id', InputArgument::REQUIRED, 'Session ID (from the adventofcode.com `session` cookie')
     ->setCode(static function (InputInterface $input, OutputInterface $output): void {
