@@ -4,6 +4,7 @@
 [![Supported PHP Versions](https://img.shields.io/packagist/php-v/colinodell/aoc-downloader?style=flat-square)](https://packagist.org/packages/colinodell/aoc-downloader)
 [![Packagist Version](https://img.shields.io/packagist/v/colinodell/aoc-downloader?style=flat-square)](https://packagist.org/packages/colinodell/aoc-downloader)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/colinodell/aoc-downloader/CI/main?style=flat-square)](https://github.com/colinodell/aoc-downloader/actions/workflows/ci.yml)
+[![Sponsor this project](https://img.shields.io/badge/sponsor%20this%20package-%E2%9D%A4-ff69b4.svg?style=flat-square)](https://github.com/sponsors/colinodell)
 
 Simple PHP-based utility to download all [Advent of Code](https://adventofcode.com/) puzzles and inputs locally.
 
