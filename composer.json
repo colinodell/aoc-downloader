@@ -1,0 +1,36 @@
+{
+    "name": "colinodell/aoc-downloader",
+    "description": "Downloads Advent of Code puzzles and inputs",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin O'Dell",
+            "email": "colinodell@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/aoc-downloader"
+    ],
+    "scripts": {
+        "test": [
+            "phpcs"
+        ]
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "league/html-to-markdown": "^5.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "symfony/console": "^5.3",
+        "symfony/css-selector": "^5.3",
+        "symfony/dom-crawler": "^5.3"
+    },
+    "require-dev": {
+        "unleashedtech/php-coding-standard": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ColinODell\\AOCDownloader\\": "src/"
+        }
+    }
+}

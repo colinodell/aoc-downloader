@@ -1,0 +1,19 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  phpcs:
+    name: PHPCS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: shivammathur/setup-php@v2
+        with:
+            php-version: 7.4
+            tools: composer:v2, cs2pr
+
+      - run: composer update --no-progress
+
+      - run: vendor/bin/phpcs -q --report=checkstyle | cs2pr

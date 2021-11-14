@@ -1,0 +1,51 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use ColinODell\AOCDownloader\Downloader;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\SingleCommandApplication;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+(new SingleCommandApplication())
+    ->setName('AOC Downloader')
+    ->addOption('output', 'o', InputOption::VALUE_REQUIRED, 'The directory to save the downloaded files', './output')
+    ->addOption('year', 'y', InputOption::VALUE_REQUIRED, 'The year to download puzzles for (default is all years)')
+    ->addArgument('session_id', InputArgument::REQUIRED, 'Session ID (from the adventofcode.com `session` cookie')
+    ->setCode(static function (InputInterface $input, OutputInterface $output): void {
+        $downloader = new Downloader($input->getArgument('session_id'));
+        $dir        = $input->getOption('output');
+
+        if ($year = $input->getOption('year')) {
+            $years = [$year];
+        } else {
+            $years = range(2015, date('Y'));
+        }
+
+        foreach ($years as $year) {
+            foreach (range(1, 25) as $day) {
+                try {
+                    $path = sprintf('%s/%d/day%02d', $dir, $year, $day);
+                    if (! file_exists($path)) {
+                        mkdir($path, 0777, true);
+                    }
+
+                    $output->write(sprintf('Downloading %s... ', $path));
+
+                    file_put_contents($path . '/input.txt', $downloader->getInput($year, $day));
+                    file_put_contents($path . '/README.md', $downloader->getPuzzleAsMarkdown($year, $day));
+
+                    $output->writeln('done.');
+                } catch (\Throwable $t) {
+                    $output->writeln('failed!');
+                    continue;
+                }
+            }
+        }
+    })
+    ->run();

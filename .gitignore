@@ -1,0 +1,6 @@
+.idea
+.phpcs-cache
+composer.lock
+vendor
+output
+*.phar
