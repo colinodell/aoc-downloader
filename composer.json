@@ -1,6 +1,7 @@
 {
     "name": "colinodell/aoc-downloader",
     "description": "Downloads Advent of Code puzzles and inputs",
+    "keywords": ["aoc", "adventofcode", "advent"],
     "type": "project",
     "license": "MIT",
     "authors": [
