@@ -10,7 +10,19 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\SingleCommandApplication;
 
-require __DIR__ . '/../vendor/autoload.php';
+// Require autoloader
+$autoloadPaths = array(
+    // Local package usage
+    __DIR__ . '/../vendor/autoload.php',
+    // Package was included as a library
+    __DIR__ . '/../../../autoload.php',
+);
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        require_once $path;
+        break;
+    }
+}
 
 (new SingleCommandApplication())
     ->setName('AOC Downloader')
