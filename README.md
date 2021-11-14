@@ -22,7 +22,7 @@ composer update -o --no-dev
 
 ## Usage
 
-You'll need to log into <adventofcode.com> and grab your `session` cookie using your browser's dev tools:
+You'll need to log into [adventofcode.com](<https://adventofcode.com/) and grab your `session` cookie using your browser's dev tools:
 
 ![](session-cookie.png)
 
