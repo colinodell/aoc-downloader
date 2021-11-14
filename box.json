@@ -1,0 +1,13 @@
+{
+    "main": "bin/aoc-downloader",
+    "blacklist": [
+        ".editorconfig",
+        ".github",
+        ".gitignore",
+        ".phpcs-cache",
+        "bin/aoc-downloader.phar",
+        "phpcs.xml.dist",
+        "README.md",
+        "session-cookie.png"
+    ]
+}

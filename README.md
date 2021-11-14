@@ -14,11 +14,19 @@ This project requires PHP 7.4 or higher.
 
 ## Installation
 
+There are two ways to download and use this utility:
+
+### From Source
+
 ```bash
 git clone https://github.com/colinodell/aoc-downloader.git
 cd aoc-downloader
 composer update -o --no-dev
 ```
+
+### PHAR
+
+A pre-compiled PHAR is also available via the [Releases tab](https://github.com/colinodell/aoc-downloader/releases).  Download the `.phar` file, make it executable, and run it.
 
 ## Usage
 

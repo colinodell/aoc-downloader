@@ -15,8 +15,24 @@
     "scripts": {
         "test": [
             "phpcs"
+        ],
+        "build": [
+            "php vendor/humbug/box/box.phar compile"
         ]
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "humbug/box",
+                "version": "3.13.0",
+                "dist": {
+                    "url": "https://github.com/box-project/box/releases/download/3.13.0/box.phar",
+                    "type": "file"
+                }
+            }
+        }
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "league/html-to-markdown": "^5.0",
@@ -26,6 +42,7 @@
         "symfony/dom-crawler": "^5.3"
     },
     "require-dev": {
+        "humbug/box": "^3.13",
         "unleashedtech/php-coding-standard": "^3.1"
     },
     "autoload": {
