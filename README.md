@@ -63,3 +63,40 @@ Options:
   -n, --no-interaction  Do not ask any interactive question
   -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 ```
+
+It will save both the puzzle test and input data locally:
+
+```
+output/2020
+├── day01
+│   ├── input.txt
+│   └── README.md
+├── day02
+│   ├── input.txt
+│   └── README.md
+├── day03
+│   ├── input.txt
+│   └── README.md
+├── day04
+│   ├── input.txt
+│   └── README.md
+├── day05
+│   ├── input.txt
+│   └── README.md
+├── day06
+│   ├── input.txt
+│   └── README.md
+├── day07
+│   ├── input.txt
+│   └── README.md
+├── day08
+│   ├── input.txt
+│   └── README.md
+├── day09
+│   ├── input.txt
+│   └── README.md
+├── day10
+│   ├── input.txt
+│   └── README.md
+...
+```
