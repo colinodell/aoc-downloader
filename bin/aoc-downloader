@@ -33,7 +33,7 @@ foreach ($autoloadPaths as $path) {
         $downloader = new Downloader($input->getArgument('session_id'));
         $dir        = $input->getOption('output');
 
-        if ($year = $input->getOption('year')) {
+        if ($year = (int)$input->getOption('year')) {
             $years = [$year];
         } else {
             $years = range(2015, date('Y'));
