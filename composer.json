@@ -50,5 +50,10 @@
         "psr-4": {
             "ColinODell\\AOCDownloader\\": "src/"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
